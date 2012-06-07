@@ -1,0 +1,40 @@
+@body : 1024px;
+@cGrey : #eee;
+@cGrey2 : #666;
+@cRed : #005100;
+.rounded (@radius: 5px) {
+  border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+}
+.border (@border-width: 0, @border-style: dotted, @border-color: #000){
+	border: @arguments;
+	}
+.fl (@side){
+	float: @side;
+}
+
+.bodyWrap	{
+	width: @body;
+	backgroud: @cGrey;
+	#header	{
+		width: 30%;
+		.fl(left);
+		background: @cGrey2;
+		height: 100px;
+		}
+	#contents{
+		width:30%;
+		.fl(left);
+		background: green;
+		height: 100px;
+		.border(1px, solid, red);
+		}
+	#footer{
+		width: 30%;
+		.fl(right);
+		background: @cGrey2;
+		.rounded (30px);
+		height: 100px;
+		}
+	}
